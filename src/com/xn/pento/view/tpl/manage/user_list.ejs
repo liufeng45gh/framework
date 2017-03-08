@@ -1,0 +1,21 @@
+<table border=1>
+<tr>
+    <th>用户名</td>
+    <th>电子邮件</td>
+    <th>状态</td>
+    <th>创建时间</td>
+    <th>操作</td>
+</tr>
+
+<% var users = data; %>
+<% for(var i=0; i < users.length; i++) {%>
+<tr>
+   <td><%= users[i].nick %></td>
+   <td><%= users[i].email %></td>
+   <td><%= user_status_str(users[i].status) %></td>
+   <td><%= users[i].created_at %></td>
+   <td> </td>
+</tr>
+<% } %>
+
+</table>
